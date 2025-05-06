@@ -1,6 +1,6 @@
-package io.github.joaoVitorLeal.workshop_api.repository;
+package io.github.joaoVitorLeal.workshopapi.repository;
 
-import io.github.joaoVitorLeal.workshop_api.domain.User;
+import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

@@ -1,4 +1,4 @@
-package io.github.joaoVitorLeal.workshop_api.controller.exception;
+package io.github.joaoVitorLeal.workshopapi.exceptions.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

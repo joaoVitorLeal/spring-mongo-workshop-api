@@ -1,7 +1,7 @@
-package io.github.joaoVitorLeal.workshop_api.config;
+package io.github.joaoVitorLeal.workshopapi.config;
 
-import io.github.joaoVitorLeal.workshop_api.domain.User;
-import io.github.joaoVitorLeal.workshop_api.repository.UserRepository;
+import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
+import io.github.joaoVitorLeal.workshopapi.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Configuration;

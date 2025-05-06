@@ -1,4 +1,4 @@
-package io.github.joaoVitorLeal.workshop_api;
+package io.github.joaoVitorLeal.workshopapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package io.github.joaoVitorLeal.workshop_api.dto;
+package io.github.joaoVitorLeal.workshopapi.dto;
 
-import io.github.joaoVitorLeal.workshop_api.domain.User;
+import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
 import lombok.Getter;
 import lombok.Setter;
 

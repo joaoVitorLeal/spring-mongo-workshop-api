@@ -1,4 +1,4 @@
-package io.github.joaoVitorLeal.workshop_api.exception;
+package io.github.joaoVitorLeal.workshopapi.exceptions;
 
 import java.io.Serial;
 

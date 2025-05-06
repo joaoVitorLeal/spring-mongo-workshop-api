@@ -1,7 +1,5 @@
-package io.github.joaoVitorLeal.workshop_api.domain;
+package io.github.joaoVitorLeal.workshopapi.domain.entities;
 
-import lombok.Data;
-import lombok.Getter;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 

@@ -1,9 +1,9 @@
-package io.github.joaoVitorLeal.workshop_api.service;
+package io.github.joaoVitorLeal.workshopapi.service;
 
-import io.github.joaoVitorLeal.workshop_api.domain.User;
-import io.github.joaoVitorLeal.workshop_api.dto.UserDto;
-import io.github.joaoVitorLeal.workshop_api.exception.ObjectNotFoundException;
-import io.github.joaoVitorLeal.workshop_api.repository.UserRepository;
+import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
+import io.github.joaoVitorLeal.workshopapi.dto.UserDto;
+import io.github.joaoVitorLeal.workshopapi.exceptions.ObjectNotFoundException;
+import io.github.joaoVitorLeal.workshopapi.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

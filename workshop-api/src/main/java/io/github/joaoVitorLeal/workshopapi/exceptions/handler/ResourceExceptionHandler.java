@@ -1,6 +1,7 @@
-package io.github.joaoVitorLeal.workshop_api.controller.exception;
+package io.github.joaoVitorLeal.workshopapi.exceptions.handler;
 
-import io.github.joaoVitorLeal.workshop_api.exception.ObjectNotFoundException;
+import io.github.joaoVitorLeal.workshopapi.exceptions.model.StandardError;
+import io.github.joaoVitorLeal.workshopapi.exceptions.ObjectNotFoundException;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>io.github.joaoVitorLeal</groupId>
-	<artifactId>workshop-api</artifactId>
+	<artifactId>workshopapi</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>workshop-api</name>
 	<description>WorkShop Spring Boot with MongoDB</description>

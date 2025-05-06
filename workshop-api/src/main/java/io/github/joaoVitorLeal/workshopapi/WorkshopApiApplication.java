@@ -1,4 +1,4 @@
-package io.github.joaoVitorLeal.workshop_api;
+package io.github.joaoVitorLeal.workshopapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

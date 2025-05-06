@@ -1,8 +1,8 @@
-package io.github.joaoVitorLeal.workshop_api.controller;
+package io.github.joaoVitorLeal.workshopapi.controller;
 
-import io.github.joaoVitorLeal.workshop_api.domain.User;
-import io.github.joaoVitorLeal.workshop_api.dto.UserDto;
-import io.github.joaoVitorLeal.workshop_api.service.UserService;
+import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
+import io.github.joaoVitorLeal.workshopapi.dto.UserDto;
+import io.github.joaoVitorLeal.workshopapi.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
