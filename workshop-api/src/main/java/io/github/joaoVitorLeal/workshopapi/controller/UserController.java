@@ -1,7 +1,7 @@
 package io.github.joaoVitorLeal.workshopapi.controller;
 
 import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
-import io.github.joaoVitorLeal.workshopapi.dto.UserDto;
+import io.github.joaoVitorLeal.workshopapi.dtos.UserDto;
 import io.github.joaoVitorLeal.workshopapi.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

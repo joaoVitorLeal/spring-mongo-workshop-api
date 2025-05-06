@@ -1,7 +1,7 @@
 package io.github.joaoVitorLeal.workshopapi.service;
 
 import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
-import io.github.joaoVitorLeal.workshopapi.dto.UserDto;
+import io.github.joaoVitorLeal.workshopapi.dtos.UserDto;
 import io.github.joaoVitorLeal.workshopapi.exceptions.ObjectNotFoundException;
 import io.github.joaoVitorLeal.workshopapi.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
