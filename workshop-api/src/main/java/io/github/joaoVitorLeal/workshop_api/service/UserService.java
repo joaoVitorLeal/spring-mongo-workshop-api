@@ -1,6 +1,7 @@
 package io.github.joaoVitorLeal.workshop_api.service;
 
 import io.github.joaoVitorLeal.workshop_api.domain.User;
+import io.github.joaoVitorLeal.workshop_api.dto.UserDto;
 import io.github.joaoVitorLeal.workshop_api.exception.ObjectNotFoundException;
 import io.github.joaoVitorLeal.workshop_api.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
@@ -23,11 +24,16 @@ public class UserService {
                .orElseThrow(() -> new ObjectNotFoundException("User not found with id " + id));
     }
 
-    public void save(User user) {
-        repository.save(user);
+    public User insert(User user) {
+        return repository.insert(user);
     }
 
-    public void delete(User user) {
-        repository.delete(user);
+    public void delete(String id) {
+        findById(id);
+        repository.deleteById(id);
+    }
+
+    public User toEntity(UserDto dto) {
+        return new User(dto.getId(), dto.getName(), dto.getEmail());
     }
 }
