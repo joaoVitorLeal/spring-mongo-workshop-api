@@ -9,7 +9,7 @@ import java.io.Serializable;
 
 @Getter
 @Setter
-public class UserResponseDto implements Serializable {
+public class UserDto implements Serializable {
 
     @Serial
     private static final long serialVersionUID = 1L;
@@ -18,7 +18,10 @@ public class UserResponseDto implements Serializable {
     private String name;
     private String email;
 
-    public UserResponseDto(User obj) {
+    public UserDto() {
+    }
+
+    public UserDto(User obj) {
         this.id = obj.getId();
         this.name = obj.getName();
         this.email = obj.getEmail();
