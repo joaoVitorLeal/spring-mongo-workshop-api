@@ -1,8 +1,9 @@
-package io.github.joaoVitorLeal.workshopapi.controller;
+package io.github.joaoVitorLeal.workshopapi.controllers;
 
+import io.github.joaoVitorLeal.workshopapi.domain.entities.Post;
 import io.github.joaoVitorLeal.workshopapi.domain.entities.User;
 import io.github.joaoVitorLeal.workshopapi.dtos.UserDto;
-import io.github.joaoVitorLeal.workshopapi.service.UserService;
+import io.github.joaoVitorLeal.workshopapi.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -51,6 +52,15 @@ public class UserController {
         user.setId(id);
         user = service.update(user);
         return ResponseEntity.noContent().build();
+    }
+
+    /**
+    * @Return user's posts
+    * */
+    @GetMapping("{id}/posts")
+    public ResponseEntity<List<Post>> findPosts(@PathVariable String id) {
+        User user = service.findById(id);
+        return ResponseEntity.ok().body(user.getPosts());
     }
 
 }
