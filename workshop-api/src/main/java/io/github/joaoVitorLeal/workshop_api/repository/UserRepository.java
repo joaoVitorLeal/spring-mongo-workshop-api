@@ -1,4 +1,10 @@
 package io.github.joaoVitorLeal.workshop_api.repository;
 
-public interface UserRepository {
+import io.github.joaoVitorLeal.workshop_api.domain.User;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends MongoRepository<User, String> {
+
 }
