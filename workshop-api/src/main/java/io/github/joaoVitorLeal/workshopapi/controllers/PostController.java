@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 
 @RestController
@@ -25,5 +26,18 @@ public class PostController {
     public ResponseEntity<List<Post>> searchByTitle(@RequestParam(value = "text", defaultValue = "") String title) {
         title = UriDecoder.decode(title); // Desnecessário geralmente, pois o Spring já decodifica parâmetros de query automaticamente via @RequestParam
         return ResponseEntity.ok().body(service.findByTitle(title));
+    }
+
+    @GetMapping("/full-search")
+    public ResponseEntity<List<Post>> fullSearch(
+            @RequestParam(value = "text", defaultValue = "") String text,
+            @RequestParam(value = "minDate", defaultValue = "") String minDate,
+            @RequestParam(value = "maxDate", defaultValue = "") String maxDate
+        ) {
+        text = UriDecoder.decode(text);
+        Date min = UriDecoder.convertDate(minDate, new Date(0L));
+        Date max = UriDecoder.convertDate(maxDate, new Date());
+
+        return ResponseEntity.ok().body(service.fullSearch(text, min, max));
     }
 }
