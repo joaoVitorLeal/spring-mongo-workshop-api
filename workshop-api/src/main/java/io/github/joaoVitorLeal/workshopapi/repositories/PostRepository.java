@@ -11,9 +11,21 @@ public interface PostRepository extends MongoRepository<Post, String> {
 
     List<Post> findByTitleContainingIgnoreCase(String title);
 
+    /// MQL
     @Query(" { 'title': { $regex: ?0, $options: 'i' } } ") // Realiza a mesma operação que o méto-do acima findByTitleContainingIgnoreCase()
     List<Post> searchByTitleContainingIgnoreCase(String title);
 
-    @Query(" { $and: [ { 'date': { $gte: ?1} }, { 'date': { $lte: ?2} }, { $or: [ { 'title': { $regex: ?0, $options: 'i' } }, { 'body': { $regex: ?0, $options: 'i' } }, { 'comments.text': { $regex: ?0, $options: 'i' } } ] } ] }")
+    /// MQL
+    @Query("""
+    { $and: [
+        { 'date': { $gte: ?1 } },
+        { 'date': { $lte: ?2 } },
+        { $or: [
+            { 'title': { $regex: ?0, $options: 'i' } },
+            { 'body': { $regex: ?0, $options: 'i' } },
+            { 'comments.text': { $regex: ?0, $options: 'i' } }
+        ] }
+    ] }
+""")
     List<Post> fullSearch(String text, Date minDate, Date maxDate);
 }
